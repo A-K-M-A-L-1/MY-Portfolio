@@ -25,37 +25,42 @@
             
 
 
-            <div class="fixed top-60 left-[78%] z-50">
+            <div class="fixed top-60 left-[81%] z-50">
                 <span
-                    class=" font-sans font-bold text-sm text-white absolute border border-yellow-500 top-[-25px] bg-[#1C1C1C] px-5 py-3 rounded left-8">My Skills</span>
-                <div class="font-sans font-bold text-sm border-2 border-yellow-500 rounded-sm ">
-                    <div class="flex flex-col justify-center space-y-4 mx-6 mb-6 mt-8">
+                    class=" font-sans tracking-widest text-[14px] font-extrabold text-white absolute border border-yellow-500 top-[-25px] bg-[#1C1C1C] px-5 py-3 rounded left-7 shadow-2xl shadow-gray-500">My Skills</span>
+                <div class="font-sans font-bold text-sm border-2 border-yellow-500 rounded-sm shadow-2xl shadow-yellow-500">
+                    <div class="flex flex-col justify-center  mx-6 mb-6 mt-8">
+                        <div class="px-3 py-2 bg-yellow-600 shadow-yellow-500 shadow-2xl hover:shadow-xl duration-300 text-white rounded-sm cursor-pointer text-center -translate-x-5 animation">Front-End</div>
                         <div
-                            class="px-3 py-2 bg-[linear-gradient(to_right,rgba(255,255,255,0.3),rgba(255,255,255,0.1))] hover:bg-yellow-600 shadow-yellow-500 shadow-sm hover:shadow-xl duration-300 text-white rounded-sm cursor-pointer text-center hover:translate-x-[20px] animation">
+                            class="px-3 py-2 bg-[linear-gradient(to_right,rgba(73,33,33,30%),rgba(255,255,255,0.1))] hover:bg-yellow-600 shadow-yellow-500 shadow-2xl hover:shadow-xl duration-300 text-white rounded-sm cursor-pointer text-center hover:translate-x-[20px] animation">
                             HTML 5</div>
                         <div
-                            class="px-3 py-2 bg-[linear-gradient(to_right,rgba(255,255,255,0.3),rgba(255,255,255,0.1))] hover:bg-yellow-600 shadow-yellow-500 shadow-sm hover:shadow-xl duration-300 text-white rounded-sm cursor-pointer text-center hover:translate-x-[20px]">
+                            class="px-3 py-2 bg-[linear-gradient(to_right,rgba(73,33,33,30%),rgba(255,255,255,0.1))] hover:bg-yellow-600 shadow-yellow-500 shadow-2xl hover:shadow-xl duration-300 text-white rounded-sm cursor-pointer text-center hover:translate-x-[20px]">
                             JS</div>
                         <div
-                            class="px-3 py-2 bg-[linear-gradient(to_right,rgba(255,255,255,0.3),rgba(255,255,255,0.1))] hover:bg-yellow-600 shadow-yellow-500 shadow-sm hover:shadow-xl duration-300 text-white rounded-sm cursor-pointer text-center hover:translate-x-[20px]">
+                            class="px-3 py-2 bg-[linear-gradient(to_right,rgba(73,33,33,30%),rgba(255,255,255,0.1))] hover:bg-yellow-600 shadow-yellow-500 shadow-2xl hover:shadow-xl duration-300 text-white rounded-sm cursor-pointer text-center hover:translate-x-[20px]">
                             CSS</div>
                         <div
-                            class="px-3 py-2 bg-[linear-gradient(to_right,rgba(255,255,255,0.3),rgba(255,255,255,0.1))] hover:bg-yellow-600 shadow-yellow-500 shadow-sm hover:shadow-xl duration-300 text-white rounded-sm cursor-pointer text-center hover:translate-x-[20px]">
+                            class="px-3 py-2 bg-[linear-gradient(to_right,rgba(73,33,33,30%),rgba(255,255,255,0.1))] hover:bg-yellow-600 shadow-yellow-500 shadow-2xl hover:shadow-xl duration-300 text-white rounded-sm cursor-pointer text-center hover:translate-x-[20px]">
                             Tailwind CSS</div>
                         <div
-                            class="px-3 py-2 bg-[linear-gradient(to_right,rgba(255,255,255,0.3),rgba(255,255,255,0.1))] hover:bg-yellow-600 shadow-yellow-500 shadow-sm hover:shadow-xl duration-300 text-white rounded-sm cursor-pointer text-center hover:translate-x-[20px]">
-                            VUE JS</div>
+                            class="px-3 py-2 bg-[linear-gradient(to_right,rgba(73,33,33,30%),rgba(255,255,255,0.1))] hover:bg-yellow-600 shadow-yellow-500 hover:shadow-xl duration-300 text-white rounded-sm cursor-pointer text-center hover:translate-x-[20px]">
+                            VUE JS
+                        </div>
+                        <div class="px-3 mt-6 py-2 bg-yellow-600 shadow-yellow-500 shadow-2xl hover:shadow-xl duration-300 text-white rounded-sm cursor-pointer text-center -translate-x-5 animation">Back-End</div>
+                        
+                            
                         <div
-                            class="px-3 py-2 bg-[linear-gradient(to_right,rgba(255,255,255,0.3),rgba(255,255,255,0.1))] hover:bg-yellow-600 shadow-yellow-500 shadow-sm hover:shadow-xl duration-300 text-white rounded-sm cursor-pointer text-center hover:translate-x-[20px]">
+                            class="px-3 py-2 bg-[linear-gradient(to_right,rgba(73,33,33,30%),rgba(255,255,255,0.1))] hover:bg-yellow-600 shadow-yellow-500 shadow-2xl hover:shadow-xl duration-300 text-white rounded-sm cursor-pointer text-center hover:translate-x-[20px]">
                             NODE JS</div>
                         <div
-                            class="px-3 py-2 bg-[linear-gradient(to_right,rgba(255,255,255,0.3),rgba(255,255,255,0.1))] hover:bg-yellow-600 shadow-yellow-500 shadow-sm hover:shadow-xl duration-300 text-white rounded-sm cursor-pointer text-center hover:translate-x-[20px]">
+                            class="px-3 py-2 bg-[linear-gradient(to_right,rgba(73,33,33,30%),rgba(255,255,255,0.1))] hover:bg-yellow-600 shadow-yellow-500 shadow-2xl hover:shadow-xl duration-300 text-white rounded-sm cursor-pointer text-center hover:translate-x-[20px]">
                             EXPRESS JS</div>
                         <div
-                            class="px-3 py-2 bg-[linear-gradient(to_right,rgba(255,255,255,0.3),rgba(255,255,255,0.1))] hover:bg-yellow-600 shadow-yellow-500 shadow-sm hover:shadow-xl duration-300 text-white rounded-sm cursor-pointer text-center hover:translate-x-[20px]">
+                            class="px-3 py-2 bg-[linear-gradient(to_right,rgba(73,33,33,30%),rgba(255,255,255,0.1))] hover:bg-yellow-600 shadow-yellow-500 shadow-2xl hover:shadow-xl duration-300 text-white rounded-sm cursor-pointer text-center hover:translate-x-[20px]">
                             MONGO DB</div>
                         <div
-                            class="px-3 py-2 bg-[linear-gradient(to_right,rgba(255,255,255,0.3),rgba(255,255,255,0.1))] hover:bg-yellow-600 shadow-yellow-500 shadow-sm hover:shadow-xl duration-300 text-white rounded-sm cursor-pointer text-center hover:translate-x-[20px]">
+                            class="px-3 py-2 bg-[linear-gradient(to_right,rgba(73,33,33,30%),rgba(255,255,255,0.1))] hover:bg-yellow-600 shadow-yellow-500  hover:shadow-xl duration-300 text-white rounded-sm cursor-pointer text-center hover:translate-x-[20px]">
                             PUG</div>
                     </div>
                 </div>

@@ -1,114 +1,125 @@
 <template>
     <div class="flex-1 bg-[#121212] h-[100vh] flex items-center justify-center relative">
-      <div class="relative bg-[url('./../assets/hero.jpg')] bg-center bg-cover h-[95vh] w-[80vw] rounded-lg">
-        <div class="absolute inset-0 bg-black opacity-50 z-10"></div>
-        <div class="relative z-20 h-[95vh] w-[80vw] text-white overflow-x-hidden overflow-y-auto">
-          <div class="html-skill">HTML 5</div>
-          <div class="js-skill">JS</div>
-          <div class="css-skill">CSS</div>
-          <div class="tailwind-skill">Tailwind CSS</div>
-          <div class="vue-skill">VUE JS</div>
-          <div class="node-skill">NODE JS</div>
-          <div class="express-skill">EXPRESS JS</div>
-          <div class="mongo-skill">MONGO DB</div>
-          <div class="pug-skill">PUG</div>
-  
-          <div>
-            <nav>
-              <ul class="flex justify-end items-center p-6 space-x-4">
-                <router-link to="/portfolio">
-                  <li :class="getNavClass('portfolio')" @click="setActive('portfolio')">
-                    Portfolio
-                  </li>
-                </router-link>
-                <router-link to="/myskills">
-                  <li :class="getNavClass('skills')" @click="setActive('skills')">My Skills</li>
-                </router-link>
-                <router-link to="/resume">
-                  <li :class="getNavClass('resume')" @click="setActive('resume')">
-                    My Resume
-                  </li>
-                </router-link>
-              </ul>
-            </nav>
-          </div>
-  
-          <!-- PDF -->
-          <div ref="pdfContainer" class="pdf-container flex flex-col mx-auto max-w-3xl space-y-10">
-            <!-- PDF.js will render the PDF here -->
-          </div>
+        <div class="relative bg-[url('./../assets/hero.jpg')] bg-center bg-cover h-[95vh] w-[80vw] rounded-lg">
+            <div class="absolute inset-0 bg-black opacity-50 z-10"></div>
+            <div class="relative z-20 h-[95vh] w-[80vw] text-white overflow-x-hidden overflow-y-auto">
+                <div class="html-skill">HTML 5</div>
+                <div class="js-skill">JS</div>
+                <div class="css-skill">CSS</div>
+                <div class="tailwind-skill">Tailwind CSS</div>
+                <div class="vue-skill">VUE JS</div>
+                <div class="node-skill">NODE JS</div>
+                <div class="express-skill">EXPRESS JS</div>
+                <div class="mongo-skill">MONGO DB</div>
+                <div class="pug-skill">PUG</div>
+
+                <div>
+                    <nav>
+                        <ul class="flex justify-end items-center p-6 space-x-4">
+                            <router-link to="/portfolio">
+                                <li :class="getNavClass('portfolio')" @click="setActive('portfolio')">
+                                    Portfolio
+                                </li>
+                            </router-link>
+                            <router-link to="/myskills">
+                                <li :class="getNavClass('skills')" @click="setActive('skills')">My Skills</li>
+                            </router-link>
+                            <router-link to="/resume">
+                                <li :class="getNavClass('resume')" @click="setActive('resume')">
+                                    My Resume
+                                </li>
+                            </router-link>
+                        </ul>
+                    </nav>
+                </div>
+
+                <!-- PDF -->
+                <div ref="pdfContainer" class="pdf-container flex flex-col mx-auto max-w-3xl space-y-10">
+                    <!-- PDF.js will render the PDF here -->
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </template>
-  
-  <script>
-  import { getDocument } from 'pdfjs-dist/webpack';
-  
-  export default {
+</template>
+
+<script>
+import { getDocument } from 'pdfjs-dist/webpack';
+
+export default {
     data() {
-      return {
-        active: 'resume',
-      };
+        return {
+            active: 'resume',
+        };
     },
     mounted() {
-        const url = '/resume.pdf'; // Path to your PDF file in the public folder
-    const container = this.$refs.pdfContainer;
-
-    // Configure PDF.js
-    pdfjsLib.GlobalWorkerOptions.workerSrc = '//cdnjs.cloudflare.com/ajax/libs/pdf.js/[VERSION]/pdf.worker.js'; // Replace [VERSION] with the version you're using
-
-    // Load PDF document
-    getDocument(url).promise.then(pdf => {
-      const renderPage = (pageNum) => {
-        pdf.getPage(pageNum).then(page => {
-          const scale = 3; // Adjust scale for better quality
-          const viewport = page.getViewport({ scale });
-
-          // Create a canvas to render the page
-          const canvas = document.createElement('canvas');
-          canvas.width = viewport.width;
-          canvas.height = viewport.height;
-          container.appendChild(canvas);
-
-          const context = canvas.getContext('2d');
-
-          // Render PDF page into canvas context
-          const renderContext = {
-            canvasContext: context,
-            viewport: viewport
-          };
-          page.render(renderContext);
-        });
-      };
-
-      // Render first two pages (adjust if needed)
-      renderPage(1);
-      renderPage(2);
-    }).catch(error => {
-      console.error('Error loading PDF:', error);
-    });
+        this.loadPdf();
     },
     methods: {
-      setActive(section) {
-        this.active = section;
-      },
-      getNavClass(section) {
-        return [
-          'px-3 py-2 bg-[linear-gradient(to_right,rgba(255,255,255,0.3),rgba(255,255,255,0.1))] hover:bg-yellow-600 shadow-yellow-500 shadow-sm hover:shadow-xl duration-300 text-white rounded-lg cursor-pointer',
-          { 'bg-yellow-600': this.active === section },
-        ];
-      },
-      openInNewTab(path) {
-        const url = this.$router.resolve({ path }).href;
-        window.open(url, '_blank');
-        this.setActive('resume');
-      }
-    },
-  };
-  </script>
-  
-  <style scoped>
+        loadPdf() {
+            const url = '/resume.pdf'; // Use an API endpoint to serve the PDF as a blob
+            const container = this.$refs.pdfContainer;
+
+            // Configure PDF.js
+            pdfjsLib.GlobalWorkerOptions.workerSrc = '//cdnjs.cloudflare.com/ajax/libs/pdf.js/[VERSION]/pdf.worker.js'; // Replace [VERSION] with the version you're using
+
+            // Fetch PDF as a blob
+            fetch(url)
+                .then(response => response.arrayBuffer())
+                .then(arrayBuffer => {
+                    // Load PDF document
+                    getDocument({ data: arrayBuffer }).promise.then(pdf => {
+                        const renderPage = (pageNum) => {
+                            pdf.getPage(pageNum).then(page => {
+                                const scale = 3; // Adjust scale for better quality
+                                const viewport = page.getViewport({ scale });
+
+                                // Create a canvas to render the page
+                                const canvas = document.createElement('canvas');
+                                canvas.width = viewport.width;
+                                canvas.height = viewport.height;
+                                container.appendChild(canvas);
+
+                                const context = canvas.getContext('2d');
+
+                                // Render PDF page into canvas context
+                                const renderContext = {
+                                    canvasContext: context,
+                                    viewport: viewport
+                                };
+                                page.render(renderContext);
+                            });
+                        };
+
+                        // Render first two pages (adjust if needed)
+                        renderPage(1);
+                        renderPage(2);
+                    }).catch(error => {
+                        console.error('Error loading PDF:', error);
+                    });
+                })
+                .catch(error => {
+                    console.error('Error fetching PDF:', error);
+                });
+        },
+        setActive(section) {
+            this.active = section;
+        },
+        getNavClass(section) {
+            return [
+                'px-3 py-2 bg-[linear-gradient(to_right,rgba(255,255,255,0.3),rgba(255,255,255,0.1))] hover:bg-yellow-600 shadow-yellow-500 shadow-sm hover:shadow-xl duration-300 text-white rounded-lg cursor-pointer',
+                { 'bg-yellow-600': this.active === section },
+            ];
+        },
+        openInNewTab(path) {
+            const url = this.$router.resolve({ path }).href;
+            window.open(url, '_blank');
+            this.setActive('resume');
+        }
+    }
+};
+</script>
+
+<style scoped>
 @keyframes float {
     0% {
         transform: translate(0, 0);
@@ -304,8 +315,4 @@
     animation: float 5s ease-in-out infinite;
     z-index: -10;
 }
-  .pdf-container {
-    /* Additional styling for the PDF container if needed */
-  }
-  </style>
-  
+</style>

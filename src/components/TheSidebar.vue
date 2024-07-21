@@ -10,8 +10,7 @@
             <!-- details -->
             <div class="flex flex-col justify-between space-y-6 items-stretch">
                 <!-- Name -->
-                <div
-                    class="flex flex-col relative shadow-[#121212] shadow-lg cursor-pointer">
+                <div class="flex flex-col relative shadow-[#121212] shadow-lg cursor-pointer">
                     <span
                         class=" font-sans font-bold text-sm text-white absolute border border-yellow-500 top-[-10px] bg-[#1C1C1C] pl-2 pr-2 left-2">Name</span>
 
@@ -31,8 +30,7 @@
                 </div>
 
                 <!-- Email -->
-                <div
-                    class="flex flex-col relative shadow-[#121212] shadow-lg duration-300 cursor-pointer">
+                <div class="flex flex-col relative shadow-[#121212] shadow-lg duration-300 cursor-pointer">
                     <span
                         class=" font-sans font-bold text-sm text-white absolute border border-yellow-500 top-[-10px] bg-[#1C1C1C] pl-2 pr-2 left-2">Email</span>
 
@@ -41,8 +39,7 @@
                 </div>
 
                 <!-- Phone -->
-                <div
-                    class="flex flex-col relative shadow-[#121212] shadow-lg duration-300 cursor-pointer">
+                <div class="flex flex-col relative shadow-[#121212] shadow-lg duration-300 cursor-pointer">
                     <span
                         class=" font-sans font-bold text-sm text-white absolute border border-yellow-500 top-[-10px] bg-[#1C1C1C] pl-2 pr-2 left-2">Phone</span>
 
@@ -51,21 +48,23 @@
                         342 8999005</span>
                 </div>
                 <!-- Social Media -->
-                <div
-                    class="flex flex-col relative duration-300 cursor-pointer shadow-[#121212] shadow-lg">
+                <div class="flex flex-col relative duration-300 cursor-pointer shadow-[#121212] shadow-lg">
                     <span
                         class=" font-sans font-bold text-sm text-white absolute border border-yellow-500 top-[-10px] bg-[#1C1C1C] pl-2 pr-2 left-2">Contact
                         Me
                     </span>
 
                     <span class="flex justify-around items-center pl-2 pr-2 pt-5 pb-2 border border-yellow-500 ">
-                        <span class="hover:bg-gradient-to-r from-yellow-300  rounded-full w-10 p-1"><a href=""
-                                target="_blank"><img src="./../assets/facebook.png" class="w-8 cursor-pointer"
-                                    alt=""></a>
+                        <span class="hover:bg-gradient-to-r from-yellow-300  rounded-full w-10 p-1"><a
+                                href="https://web.facebook.com/profile.php?id=100093138069993" target="_blank"><img
+                                    src="./../assets/facebook.png" class="w-8 cursor-pointer" alt=""></a>
                         </span>
-                        <span class="hover:bg-gradient-to-r from-yellow-300 rounded-full p-2"><a href=""
-                                target="_blank"><img src="./../assets/gmail.png" class="w-7 cursor-pointer" alt=""></a>
+                        <span class="hover:bg-gradient-to-r from-yellow-300 rounded-full p-2">
+                            <a href="mailto:aqmalfaraz@gmail.com" target="_blank">
+                                <img src="./../assets/gmail.png" class="w-7 cursor-pointer" alt="Gmail">
+                            </a>
                         </span>
+
                         <span class="hover:bg-gradient-to-r from-yellow-300  rounded-full p-2"><a
                                 href="https://linkedin.com/in/akmal-faraz-591756319" target="_blank"><img
                                     src="./../assets/linkedin.png" class="w-7 cursor-pointer" alt=""></a>
