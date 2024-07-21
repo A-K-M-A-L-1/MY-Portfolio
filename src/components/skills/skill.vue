@@ -74,7 +74,7 @@
                                 My Skills
                             </li>
                         </router-link>
-                        <router-link to="" @click="openInNewTab('/resume')">
+                        <router-link to="/resume" >
                             <li
                                 class="px-3 py-2 bg-[linear-gradient(to_right,rgba(255,255,255,0.3),rgba(255,255,255,0.1))] hover:bg-yellow-600 shadow-yellow-500 shadow-sm hover:shadow-xl duration-300 text-white rounded-lg cursor-pointer">
                                 My Resume
