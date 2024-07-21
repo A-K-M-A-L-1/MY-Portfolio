@@ -24,7 +24,7 @@
                 <router-link to="/myskills">
                   <li :class="getNavClass('skills')" @click="setActive('skills')">My Skills</li>
                 </router-link>
-                <router-link to="" @click="openInNewTab('/resume')">
+                <router-link to="/resume">
                   <li :class="getNavClass('resume')" @click="setActive('resume')">
                     My Resume
                   </li>
