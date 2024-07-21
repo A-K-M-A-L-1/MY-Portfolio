@@ -35,22 +35,7 @@
                     </nav>
                 </div>
 
-                <!-- <div>
-                    <nav>
-                        <ul class="flex justify-end items-center p-6 space-x-4">
-                           <a href="#"> <li
-                                class="px-3 py-2 bg-[linear-gradient(to_right,rgba(255,255,255,0.3),rgba(255,255,255,0.1))] hover:bg-yellow-600 shadow-yellow-500 shadow-sm hover:shadow-xl duration-300 text-white rounded-lg cursor-pointer">
-                                Portfolio</li></a>
-                            <li
-                                class="px-3 py-2 bg-[linear-gradient(to_right,rgba(255,255,255,0.3),rgba(255,255,255,0.1))] hover:bg-yellow-600 shadow-yellow-500 shadow-sm hover:shadow-xl duration-300 text-white rounded-lg cursor-pointer">
-                                My Skills</li>
-                            <li
-                                class="px-3 py-2 bg-[linear-gradient(to_right,rgba(255,255,255,0.3),rgba(255,255,255,0.1))] hover:bg-yellow-600 shadow-yellow-500 shadow-sm hover:shadow-xl duration-300 text-white rounded-lg cursor-pointer">
-                                My Resume</li>
-                        </ul>
-                    </nav>
-                </div> -->
-
+               
                 <div class="flex flex-col mt-28 ml-12 max-w-2xl">
                     <h1 class="text-4xl font-bold">Hi, I’m Akmal</h1>
                     <p class="mt-2 text-lg">A Full-Stack Web Developer</p>

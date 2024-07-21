@@ -1,5 +1,5 @@
 <template>
-    <div class="flex justify-center ">
+    <div class="flex justify-center">
 
         <the-sidebar-vue></the-sidebar-vue>
         <resume-hero></resume-hero>
