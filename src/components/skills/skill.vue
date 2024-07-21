@@ -25,10 +25,10 @@
             
 
 
-            <div class="fixed top-64 left-[78%]">
+            <div class="fixed top-60 left-[78%] z-50">
                 <span
                     class=" font-sans font-bold text-sm text-white absolute border border-yellow-500 top-[-25px] bg-[#1C1C1C] px-5 py-3 rounded left-8">My Skills</span>
-                <div class="font-sans font-bold text-sm border-2 border-yellow-500 rounded-sm">
+                <div class="font-sans font-bold text-sm border-2 border-yellow-500 rounded-sm ">
                     <div class="flex flex-col justify-center space-y-4 mx-6 mb-6 mt-8">
                         <div
                             class="px-3 py-2 bg-[linear-gradient(to_right,rgba(255,255,255,0.3),rgba(255,255,255,0.1))] hover:bg-yellow-600 shadow-yellow-500 shadow-sm hover:shadow-xl duration-300 text-white rounded-sm cursor-pointer text-center hover:translate-x-[20px] animation">
@@ -441,7 +441,7 @@ export default {
 .express-skill {
     position: absolute;
     top: 350%;
-    left: 89%;
+    left: 92%;
     background-color: #facc15;
     box-shadow: 0 4px 8px rgb(245, 212, 83);
     border: 2px solid #facc15;
