@@ -4,9 +4,11 @@
         <div class="flex pt-6 flex-col p-12 justify-evenly space-y-12">
 
             <span class="flex justify-center">
-                <img src="../assets/meee.png" alt=""
-                    class="rounded-full w-[130px] h-[125px] shadow-lg duration-300 cursor-pointer">
+                <img src="../assets/meee-BG_he_es.png" alt="" class="rounded-full shadow-lg duration-300 cursor-pointer"
+                    style="width: 150px; height: 150px; object-fit: cover; object-position: top;">
             </span>
+
+
             <!-- details -->
             <div class="flex flex-col justify-between space-y-6 items-stretch">
                 <!-- Name -->
